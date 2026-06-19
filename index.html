@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Her Birthday Special</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    animation: fade 1s ease-in-out;
+}
+
+.active { display: flex; }
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+h1 {
+    color: #ff4d6d;
+    text-shadow: 0 0 20px #ff4d6d;
+    font-size: 36px;
+}
+
+p {
+    max-width: 750px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover { transform: scale(1.1); }
+
+.photo {
+    width: 170px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff4d6d;
+}
+
+.glow {
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 10px #ff4d6d;}
+    to {text-shadow: 0 0 25px #ff4d6d;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME -->
+<div class="screen active" id="home">
+    <h1 class="glow">🎂 Happy Birthday</h1>
+    
+    <p>
+        This is not just a website…  
+        it’s a small collection of memories, feelings, and everything I couldn’t say properly 💖<br><br>
+
+        Take your time… open it slowly ✨
+    </p>
+
+    <button onclick="next('start')">Start ▶</button>
+</div>
+
+<!-- START -->
+<div class="screen" id="start">
+    <h1>💫 How it all began</h1>
+    <p>
+        It started as a normal conversation… 😊<br>
+        But slowly, it became something I never expected to be so special.
+    </p>
+    <button onclick="next('memories')">Next ▶</button>
+</div>
+
+<!-- MEMORIES -->
+<!-- MEMORIES -->
+<div class="screen" id="memories">
+    <h1>📸 Our Memories</h1>
+    <p>Some moments don’t need big words… they just stay forever 💛</p>
+
+    <div class="grid" style="
+        display:grid;
+        grid-template-columns:repeat(4,140px);
+        gap:15px;
+        justify-content:center;
+        margin-top:20px;
+    ">
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(-3deg);">
+            <img src="photo1.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">💖 Us</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(2deg);">
+            <img src="photo2.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">✨ Moment</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(-2deg);">
+            <img src="photo3.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">💛 Memory</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(3deg);">
+            <img src="photo4.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">😊 Smile</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(-4deg);">
+            <img src="photo5.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">💫 Vibe</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(2deg);">
+            <img src="photo6.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">🌸 Chill</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(-2deg);">
+            <img src="photo7.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">🎀 Happy</div>
+        </div>
+
+        <div class="polaroid" style="background:white;padding:8px 8px 18px;border-radius:4px;box-shadow:0 10px 20px rgba(0,0,0,0.6);transform:rotate(3deg);">
+            <img src="photo8.jpg" style="width:100%;height:110px;object-fit:cover;">
+            <div style="color:#333;font-size:12px;margin-top:6px;">💭 Forever</div>
+        </div>
+
+    </div>
+
+    <button onclick="next('feelings')">Next ▶</button>
+</div>
+
+<!-- FEELINGS -->
+<div class="screen" id="feelings">
+    <h1>💌 What I want to say</h1>
+    <p>
+        I may not express everything…<br>
+        But you truly mean a lot to me 💖<br><br>
+        Your presence always made things better, even in silence.
+    </p>
+    <button onclick="next('return')">Next ▶</button>
+</div>
+
+<!-- RETURN -->
+<div class="screen" id="return">
+    <h1>🎁 Your Surprise</h1>
+    <p>
+        The birthday website you made for me 🥹<br>
+        It was not just a gift… it was effort, time & care.<br><br>
+        I’ll always remember it 💛
+    </p>
+    <button onclick="next('final')">Final ▶</button>
+</div>
+
+<!-- FINAL -->
+<div class="screen" id="final">
+    <h1 class="glow">🎂 HAPPY BIRTHDAY 💖</h1>
+
+    <p>
+        May God bless you with happiness, peace, and success in everything you do 💖<br><br>
+
+        May all your dreams come true and your life be filled with beautiful moments ✨<br><br>
+
+        You deserve all the beautiful things in life 💛<br><br>
+
+        Stay happy, stay healthy, and keep smiling always 😊
+    </p>
+
+    <p style="margin-top:25px;">
+        With lots of love,<br>
+        – Sridevi 💖
+    </p>
+</div>
+
+
+<script>
+function next(id){
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
